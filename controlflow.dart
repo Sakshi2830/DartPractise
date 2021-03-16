@@ -42,6 +42,8 @@ void printoddeven(int value){
    }
    return result;
  }
+ //{"fold funtion reduces a collection to a single value by iteratively combining 
+ //each element of the collection with an existing value"}
   int sum3(List<int> value){
     return value.fold(0, (result, value) => result + value);
   }
