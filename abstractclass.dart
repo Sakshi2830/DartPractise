@@ -12,19 +12,22 @@ void main(){
 // write code that are using the interface, without knowing anything underline the implementation
 //powerful concept that help us writing better code
 void printarea(shape Shape){
-  print(Shape.area());
+ // print(Shape.area());
+ print(Shape.area);
+ 
 }
 abstract class shape{
-double area();
+//double area(); before using computed property..
+double get area;//we an use getter and setter which is computed property of dart
 }
 class square implements shape{//implements method use to convert abstract class as subclass and the create its object in main
   square({this.side=0.0});
   final double side;
-   double area()=>side*side;
+   double get area=>side*side;
 }
 class Circle implements shape{
   Circle({this.radius=0.0});
   final double radius;
-  double area()=>radius*radius*pi;
+  double get area=>radius*radius*pi;
 }
   
