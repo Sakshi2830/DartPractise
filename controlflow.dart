@@ -8,6 +8,9 @@ print(sum(values));
 // for "for" loop funtion
 final valuess=[2,3,4,6];
 print(sum2(valuess));
+//for fold funtion
+final value=[6,7,8,22];
+print(sum(value));
   
 }//ifelse statement function nd ternary operator
 void printoddeven(int value){
@@ -39,3 +42,6 @@ void printoddeven(int value){
    }
    return result;
  }
+  int sum3(List<int> value){
+    return value.fold(0, (result, value) => result + value);
+  }
